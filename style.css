@@ -1,0 +1,631 @@
+* {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url('https://lh3.googleusercontent.com/0agcwXcskUN_x0xeSmGcjKr1sjG-aDV3QfImGrALsgwLBU-SH3cdggA-eCsrieNH7JF5VI1ci2cOjSBmmrQ5yBCmqOg2htUR3xsrm9AQZ2WRkn8cOl51UhP7m_Vjxxz2XZpRmfl56sCdlWO2C76rda2k_TF45ydx_Kh7IBbnQ0OTtTDf2WyUWRzjoriwMjQV4CsP8ueoFbbiupAi064-Tcj5-mYOoDIYvM2nWs8KA42ryL8EmT4Vwx9FO9p6sT-jM86m96dZrp8GlZjQTyiRgtHJYQBiQvoZ0mYXu0meFlSBAuMJYIoZETr5b67imQ4MnpF9XcNtpIpiLwyDW6GDCgVJP0BalW4PgVZGxZmxlwDyVufPSwL0Sjf98d-QiPdfGQRFx9z6j2_YdqRjeOBuuzri5wWuEhJSwBByAvgw-LMB3iIrRpJ_Dp4XKK428osXp_fSI5kTyV7ro6rUSKWkhizELhgGrNXDh-t5ycMAwOlQyApBfDci4HW1M9SfsmAJVwsPTJR6ll1EB9Pg7K--gIl0d6FrFu9Hh1ogUAk40_TXUFnolro9cjOnVdJLq6ft5BMg5LktvDnXLwqMS4qs7kVqWvrB4OB4D2bAgSuA3pisxcnzVtRXfwWUX5QPMtmw4r0Ocz38J-Apkgz3RT9fkb4Zb3Cb-rrTYlvndKtdH1lD4na5K7lI9AHrcphgzsldRlfJLHRyq-Pghv7kHN82MsUd=w1047-h698-no');
+    background-color:grey;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.loadingScreen { 
+    display: none;
+    position: fixed;
+    text-align:center;
+    top:100px;
+    width:100%;
+    z-index: 100;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  background: #ffffff;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+
+.loader {
+  color: #ffffff;
+  text-indent: -9999em;
+  margin: 40px auto;
+  position: relative;
+  font-size: 11px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+
+.container {
+    height: 100vmax;
+    width: 100%;
+}
+
+.modifyContainer {
+    background-color: rgba(22, 27, 34, 0.9) ;
+}
+
+h1, h2, h3 {
+    margin: 0px;
+    color: white;
+    font-family: 'Megrim', cursive;
+}
+
+button {
+    background-color: #65858C;
+    color: white;
+    height: 70px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;    font-size: 20px;
+}
+
+/*opening page*/
+header {
+    padding-top: 40%;
+    text-align: center;
+    color: white;
+}
+
+.logoHero {
+    height: 200px;
+}
+
+.heroTagLine {
+    font-family: 'Megrim', cursive;
+    font-size: 20px;
+    font-weight: 700;
+}
+/*select city display*/
+.cityCluster {
+    padding-top: 2%;
+    text-align: center;
+}
+
+.citiesOne, .citiesTwo {
+    cursor: pointer;
+    padding-top:5%;
+    padding-bottom:15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.city {
+    margin: 10px;
+    height: 150px;
+    width: 150px;
+}
+
+.whereDiving {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    padding-bottom: 10%;
+    font-size: 30px;
+
+}
+
+.seattle {
+    background-image: url('https://lh3.googleusercontent.com/MsQuWGR7F0_GdTL02FvBg4edemd760BFInNMXavh-wR-4WCml0Vt9C9kMuSXuwheCr3iAcOwfNpOFdz8-z9OpKAgtRm-fXt5tvT8NvJu2XUN55nZxrf8NkcgA2OF2vJX-oebe5RJVSdkqzUU2vPVs11H9hUI2j3dkFo9-IIuyQM6xWpqd4p0Qp3zxqF5wAuC_e6M9a-iFJN0lV6rKpbdDlFaj3veefMRB0HboICsG_usSRw8FvCZweNM7JKK02lGsp7IxljMgnI_P9KGI9s1fXRcfYKJ7mhbcB1-slaI2XAo_nfHWFSwLBjPgnxRgdNcdDOe3CD0psVHcw9ctMqGtgt_rT2-97u2XABK6Ur481zTo2CL-nSzvQsDKTm1K64Gv1X9b04M5Qdy0jicYzx0loTN_laxKyllVdZZZbXANeEEPrY5bMFnM3-1aYEDf0lhziNMEApkhH-pn6hptD_Eh0Rk2IXBrPS2_uX2UDX3icsnO5PV4VDS8XhZnCoVXPoKY-AWu9PjqdEs0ZSdEmk2qolFd0lEo-Dsz94DdMmJ9A_EMoM6VVJVddSb4PzuMKoqVs31WWS0YfHHIlKwjHKiTEh7-WLfqUeWkZs72P69fctxInBM5GgglzAzG34vkm8rLrcCjwXotXGGCt11LhSvZ2OjtdAvFRT9wljpUSkkeqNSNceRJOhsYGbinOR_AYz8YV_WU_9R0XqECpSRzOisSKwv=s725-no');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tacoma {
+    background-image: url('https://lh3.googleusercontent.com/SUEGmQiPYKPR8NgU-9iXPMouioHrGSslk5bw28c47p-muuwpVDOf3SIy5g6n5KbG6eld4ocXXklBoOtGYEiD2PXduz8fTUyx09OuflHlRttaiuOpPbEHklzKm1OkH6OovIhdF8Pc2alDh5A1DYlz6THg0j24abyW5zPXPzV84LmbqCd825T26ZFb7YCvaOc-2sN7WN6kJ9Ums-4aufI4o8ifb06J3JxUAEEA7WaozNFHjS5T7RtGAQCi0hAJuhwzLAz2RHH_SdyY-lQiHdxbt-kBt6frM19ICCBXo-H3u1Im5ZysmGRYndiUTNz0-kvYijgEb-A-kdHe8SqmfbGL1HrQf5NrVtTMuDksQK529wF1nziidfMJ91HqkFWAIqgpGpYOoSOUE5LGdIK6fcs5TlhMqHUKDa20-aUzGejR7cdU_deDFHGH2Ry3_XqEEiE3xZThn-H1wDMHH3yl-NfSlCTuD4sn47zIiZwEz8VKUgH80vy49YuqBjEKbQ0qo0UdBVEkaESO_soK4b7VkFsb0sWUWisHgHuPTng4uOOPXCivSvrIcbsL-nO_9LfkM3p24dQIl-zUzB7OAUI0Zmp6132kt_3ZFrQ-l6Mpy5e3eTRx0VI70mny3xD1HBhmCWkpqXRCYOFHaXGmTZjLy0q_jBiZMFYv04HFQ9z-0Jf_kiQWL8zUl1wouHqdh_fDZQUAhjZLIcxD2ryCxR6O8U05I--6=s725-no');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.porttownsend {
+    background-image: url('https://lh3.googleusercontent.com/htHGS6owdPJWKh-d6cyjtsRKlicPjROAwz0epHlkXdteFkqv3KDXSTJLHE0Y9h4W8IgzlTLMcR_3VqriAofb9F2d9Nw9vPhAZVWhtxMC8UMNdzTqZM9urtZvAKREKD_HL_T7BVSCJz6e2E0UHxzDU4u0eJ9ExV0dEsJ3inzIS6PTmmebW9xZlYULakcB5I99kL_qLw8miFZIE60Rhq8yi0oLFUZ2lGSuyS7lYN1FUTNib2TbXwoYHSPIGAFPWAU1sNKq70mvBw1QGERrbTHaCfmux0ByAb06pSAK6bUeoLhrUfDRDZMu1GUASbYUkKOV5pWmBO6I1XhMPIp7Ax97lr_Xk5D9tai_6OBa_9xarXTFmkhx4HGOtd4jcrA2wl7wqs1wOYYBwCgypjY34Qn7LlBjdZwDgbU8ASUMKJmI73ge6e44l6oHpYJ0KKE0IHZno-nlrC_wH0p0z7Osw5BXNMr3x7x6lQJzZJieAzCwEOCyq0WG58rXKmFYLo3z06BT7T9_IgXbt7AXr-s2ZaO4BW-Txt5re8od12ctGrMFnrV63FPH0D56xEofCBtSKduO4lEaVQdJw-vwKCaXOIjuMuXKoyhPXUZPz4NTQd704pLAjye6ZxV8Ezxwz4-nXQhEBaLnUmWjSjwzoDwNeZvsoLy7D4Ad66llfo_y6YsjZBM9WTyH6hJEau1Vp8mAbCm996CneZSQY0UsDA_5hIavuD_K=w725-h726-no');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.neahbay {
+    background-image: url('https://lh3.googleusercontent.com/gSiePg5p4pEuzw7LbpYWe2Hp4xcR6ttnpBv5xmCTGj0_xE7in783mnK-ll95HKy4Sa23GRHDU2u-Wk6nSLdwd8HZnEWvlkgItmzZfi-kHSiv2AbRPVCWi4LhW11usMJIpjyaO2KOmhkM4Vf1mpELeArVZhrr8UtGRc3FVpxwctkU0l3NxFo-2BLngGtqN_tR_bvGjY5UbgnN0_MS20RQybP8s4cP88FpauAas7P8mslTw3BiMC8ktEYq7ZK8xkhaN7P0lIDqSR-hsc4bbTbfA_8OysiHhPJJYOfsgKIGtFMQ733lmYzvByHxbkoAwpDZV1qszZZjux7hcGwM_7VcLjV0pjC3zE3P-eniRPVGYs6QRBG7HLUI7ZKHLhHANN5y3IDowgOkpRknPdk55JvKh0tAbkdX1fBlYKrmmFOMdBcVRU2ofnSz2xY7s2KBOs1anjTeNMjrI4N-_TU3zIo1GhYwGvqjStZkoJIL76myI_Ye90bjlgcazGdLLitd92vpsgk9YySAyuNRAzFxbVh3VH4uWCeGdMXyM-4_pnY3jP-qHe5mMkVV7P7ZVMnkpgeFPuWhbUWLE8vhGlb8OIzUFp7H_kj1htCFKRiENBlMS9OjOrdg5OAKMgT9gaSyiA4bl9Gcf3d0FV1wtXKLN3NKqINPp5xa35nq5NUuYAb4PVdOfYCTjX8AZJvqLYL5B3LlosXGyCHS1ihHjS2rWM5KC_CW=s725-no');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/*tide information display*/
+.tideResponse {
+    color: white;
+    padding-top: 1%;
+}
+
+.nextSlack {
+    padding-top:50px;
+    border: 1px solid white;
+    border-radius: 90px;
+    height: 240px;
+    width: 240px;
+    font-size: 40px;
+    background-color: rgb(0, 0, 0, 0.6);
+}
+
+.tideDetails {
+    margin-top:5px;
+    margin-bottom:5px;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 14vh;
+    background-color: rgb(0, 0, 0, 0.6);
+}
+
+.timeDisplay {
+    font-size: 90px;
+    margin: 0px;
+}
+
+.ulTides {
+    margin-bottom: 10%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0px;
+}
+
+li {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+.tideDetailsBold {
+    font-size: 25px;
+}
+/*weather display*/
+.weatherDisplay {
+    color: white;
+    padding: 10px;
+}
+
+.ulWeather {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0px;
+    margin: 0px;
+    font-size: 24px;
+}
+
+.smallLogo {
+    height: 22px;
+    margin-right: 8px;
+}
+
+.tempLogo {
+    height: 19px;
+    margin-right: 5px;
+}
+
+.cityName {
+    padding-bottom: 12px;
+    font-size: 30px;
+}
+
+/*tablet*/
+    @media screen and (min-width: 600px) and (max-width : 1024px) {
+    /*opening page*/
+        header {
+            padding-top: 30%;
+            text-align: center;
+            color: white;
+        }
+
+        .logoHero {
+            height: 320px;
+        }
+
+        .heroTagLine {
+            font-family: 'Megrim', cursive;
+            font-size: 40px;
+            font-weight: 700;
+        }
+    /*city select screen*/
+        .cityCluster {
+            padding-top: 2%;
+            text-align: center;
+        }
+
+        .citiesOne, .citiesTwo {
+            cursor: pointer;
+            padding-top:5%;
+            padding-bottom:15%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .city {
+            margin: 10px;
+            height: 200px;
+            width: 200px;
+        }
+
+        .whereDiving {
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 40px;
+            padding-bottom: 10%;
+            font-size: 50px;
+
+        }
+
+        .seattle {
+            background-image: url('https://lh3.googleusercontent.com/MsQuWGR7F0_GdTL02FvBg4edemd760BFInNMXavh-wR-4WCml0Vt9C9kMuSXuwheCr3iAcOwfNpOFdz8-z9OpKAgtRm-fXt5tvT8NvJu2XUN55nZxrf8NkcgA2OF2vJX-oebe5RJVSdkqzUU2vPVs11H9hUI2j3dkFo9-IIuyQM6xWpqd4p0Qp3zxqF5wAuC_e6M9a-iFJN0lV6rKpbdDlFaj3veefMRB0HboICsG_usSRw8FvCZweNM7JKK02lGsp7IxljMgnI_P9KGI9s1fXRcfYKJ7mhbcB1-slaI2XAo_nfHWFSwLBjPgnxRgdNcdDOe3CD0psVHcw9ctMqGtgt_rT2-97u2XABK6Ur481zTo2CL-nSzvQsDKTm1K64Gv1X9b04M5Qdy0jicYzx0loTN_laxKyllVdZZZbXANeEEPrY5bMFnM3-1aYEDf0lhziNMEApkhH-pn6hptD_Eh0Rk2IXBrPS2_uX2UDX3icsnO5PV4VDS8XhZnCoVXPoKY-AWu9PjqdEs0ZSdEmk2qolFd0lEo-Dsz94DdMmJ9A_EMoM6VVJVddSb4PzuMKoqVs31WWS0YfHHIlKwjHKiTEh7-WLfqUeWkZs72P69fctxInBM5GgglzAzG34vkm8rLrcCjwXotXGGCt11LhSvZ2OjtdAvFRT9wljpUSkkeqNSNceRJOhsYGbinOR_AYz8YV_WU_9R0XqECpSRzOisSKwv=s725-no');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center
+        }
+
+        .tacoma {
+            background-image: url('https://lh3.googleusercontent.com/SUEGmQiPYKPR8NgU-9iXPMouioHrGSslk5bw28c47p-muuwpVDOf3SIy5g6n5KbG6eld4ocXXklBoOtGYEiD2PXduz8fTUyx09OuflHlRttaiuOpPbEHklzKm1OkH6OovIhdF8Pc2alDh5A1DYlz6THg0j24abyW5zPXPzV84LmbqCd825T26ZFb7YCvaOc-2sN7WN6kJ9Ums-4aufI4o8ifb06J3JxUAEEA7WaozNFHjS5T7RtGAQCi0hAJuhwzLAz2RHH_SdyY-lQiHdxbt-kBt6frM19ICCBXo-H3u1Im5ZysmGRYndiUTNz0-kvYijgEb-A-kdHe8SqmfbGL1HrQf5NrVtTMuDksQK529wF1nziidfMJ91HqkFWAIqgpGpYOoSOUE5LGdIK6fcs5TlhMqHUKDa20-aUzGejR7cdU_deDFHGH2Ry3_XqEEiE3xZThn-H1wDMHH3yl-NfSlCTuD4sn47zIiZwEz8VKUgH80vy49YuqBjEKbQ0qo0UdBVEkaESO_soK4b7VkFsb0sWUWisHgHuPTng4uOOPXCivSvrIcbsL-nO_9LfkM3p24dQIl-zUzB7OAUI0Zmp6132kt_3ZFrQ-l6Mpy5e3eTRx0VI70mny3xD1HBhmCWkpqXRCYOFHaXGmTZjLy0q_jBiZMFYv04HFQ9z-0Jf_kiQWL8zUl1wouHqdh_fDZQUAhjZLIcxD2ryCxR6O8U05I--6=s725-no');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center
+        }
+
+        .porttownsend {
+            background-image: url('https://lh3.googleusercontent.com/htHGS6owdPJWKh-d6cyjtsRKlicPjROAwz0epHlkXdteFkqv3KDXSTJLHE0Y9h4W8IgzlTLMcR_3VqriAofb9F2d9Nw9vPhAZVWhtxMC8UMNdzTqZM9urtZvAKREKD_HL_T7BVSCJz6e2E0UHxzDU4u0eJ9ExV0dEsJ3inzIS6PTmmebW9xZlYULakcB5I99kL_qLw8miFZIE60Rhq8yi0oLFUZ2lGSuyS7lYN1FUTNib2TbXwoYHSPIGAFPWAU1sNKq70mvBw1QGERrbTHaCfmux0ByAb06pSAK6bUeoLhrUfDRDZMu1GUASbYUkKOV5pWmBO6I1XhMPIp7Ax97lr_Xk5D9tai_6OBa_9xarXTFmkhx4HGOtd4jcrA2wl7wqs1wOYYBwCgypjY34Qn7LlBjdZwDgbU8ASUMKJmI73ge6e44l6oHpYJ0KKE0IHZno-nlrC_wH0p0z7Osw5BXNMr3x7x6lQJzZJieAzCwEOCyq0WG58rXKmFYLo3z06BT7T9_IgXbt7AXr-s2ZaO4BW-Txt5re8od12ctGrMFnrV63FPH0D56xEofCBtSKduO4lEaVQdJw-vwKCaXOIjuMuXKoyhPXUZPz4NTQd704pLAjye6ZxV8Ezxwz4-nXQhEBaLnUmWjSjwzoDwNeZvsoLy7D4Ad66llfo_y6YsjZBM9WTyH6hJEau1Vp8mAbCm996CneZSQY0UsDA_5hIavuD_K=w725-h726-no');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center
+        }
+
+        .neahbay {
+            background-image: url('https://lh3.googleusercontent.com/gSiePg5p4pEuzw7LbpYWe2Hp4xcR6ttnpBv5xmCTGj0_xE7in783mnK-ll95HKy4Sa23GRHDU2u-Wk6nSLdwd8HZnEWvlkgItmzZfi-kHSiv2AbRPVCWi4LhW11usMJIpjyaO2KOmhkM4Vf1mpELeArVZhrr8UtGRc3FVpxwctkU0l3NxFo-2BLngGtqN_tR_bvGjY5UbgnN0_MS20RQybP8s4cP88FpauAas7P8mslTw3BiMC8ktEYq7ZK8xkhaN7P0lIDqSR-hsc4bbTbfA_8OysiHhPJJYOfsgKIGtFMQ733lmYzvByHxbkoAwpDZV1qszZZjux7hcGwM_7VcLjV0pjC3zE3P-eniRPVGYs6QRBG7HLUI7ZKHLhHANN5y3IDowgOkpRknPdk55JvKh0tAbkdX1fBlYKrmmFOMdBcVRU2ofnSz2xY7s2KBOs1anjTeNMjrI4N-_TU3zIo1GhYwGvqjStZkoJIL76myI_Ye90bjlgcazGdLLitd92vpsgk9YySAyuNRAzFxbVh3VH4uWCeGdMXyM-4_pnY3jP-qHe5mMkVV7P7ZVMnkpgeFPuWhbUWLE8vhGlb8OIzUFp7H_kj1htCFKRiENBlMS9OjOrdg5OAKMgT9gaSyiA4bl9Gcf3d0FV1wtXKLN3NKqINPp5xa35nq5NUuYAb4PVdOfYCTjX8AZJvqLYL5B3LlosXGyCHS1ihHjS2rWM5KC_CW=s725-no');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center
+        }
+    /*tide response information*/
+        .tideResponse {
+            color: white;
+            padding-top: 1%;
+        }
+
+        .nextSlack {
+            padding-top:75px;
+            border: 1px solid white;
+            border-radius: 90px;
+            height: 350px;
+            width: 350px;
+            font-size: 60px;
+            background-color: rgb(0, 0, 0, 0.6);
+        }
+
+        .tideDetails {
+            margin-top:5px;
+            margin-bottom:5px;
+            border: 1px solid white;
+            border-radius: 10px;
+            width: 14vh;
+            background-color: rgb(0, 0, 0, 0.6);
+        }
+
+        .timeDisplay {
+            font-size: 125px;
+            margin: 0px;
+        }
+
+        .ulTides {
+            margin-top: 2%;
+            margin-bottom: 10%;
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: 0px;
+        }
+
+        .tideDetailsPara {
+            padding-top: 10px;
+            font-size: 25px;
+        }
+
+        li {
+            font-family: 'Fira Sans Extra Condensed', sans-serif;
+        }
+
+        .tideDetailsBold {
+            font-size: 50px;
+            padding: 20px;
+        }
+
+        button {
+            background-color: #65858C;
+            color: white;
+            height: 90px;
+            width: 200px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: 'Fira Sans Extra Condensed', sans-serif;    
+            font-size: 30px;
+        }
+    /*weather display & logo*/
+        .weatherDisplay {
+            color: white;
+            padding: 10px;
+        }
+
+        .ulWeather {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: 0px;
+            margin: 0px;
+            font-size: 30px;
+        }
+
+        .smallLogo {
+            height: 34px;
+            margin-right: 8px;
+        }
+
+        .tempLogo {
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        .cityName {
+            padding-bottom: 20px;
+            font-size: 50px;
+        }
+    }
+
+/*full screen*/
+    @media screen and (min-width: 1025px) {
+        /*opening page*/
+            .container {
+                height: 100vh;
+                width: 100%;
+            }
+
+            .modifyContainer {
+                background-color: rgb(0, 0, 0, 0.6) ;
+            }
+
+            header {
+                margin-top: -300px;
+                text-align: center;
+                color: white;
+            }
+        
+            .logoHero {
+                height: 300px;
+            }
+        
+            .heroTagLine {
+                font-family: 'Megrim', cursive;
+                font-size: 40px;
+                font-weight: 700;
+            }
+        /*city select screen*/
+            .cityCluster {
+                text-align: center;
+            }
+        
+            .citiesOne, .citiesTwo {
+                cursor: pointer;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                padding:20px;
+            }
+        
+            .city {
+                margin-left: 30px;
+                margin-right: 30px;
+                height: 200px;
+                width: 200px;
+            }
+        
+            .whereDiving {
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: 40px;
+                font-size: 50px;
+                padding-bottom: 40px;
+        
+            }
+        
+            .seattle {
+                background-image: url('https://lh3.googleusercontent.com/MsQuWGR7F0_GdTL02FvBg4edemd760BFInNMXavh-wR-4WCml0Vt9C9kMuSXuwheCr3iAcOwfNpOFdz8-z9OpKAgtRm-fXt5tvT8NvJu2XUN55nZxrf8NkcgA2OF2vJX-oebe5RJVSdkqzUU2vPVs11H9hUI2j3dkFo9-IIuyQM6xWpqd4p0Qp3zxqF5wAuC_e6M9a-iFJN0lV6rKpbdDlFaj3veefMRB0HboICsG_usSRw8FvCZweNM7JKK02lGsp7IxljMgnI_P9KGI9s1fXRcfYKJ7mhbcB1-slaI2XAo_nfHWFSwLBjPgnxRgdNcdDOe3CD0psVHcw9ctMqGtgt_rT2-97u2XABK6Ur481zTo2CL-nSzvQsDKTm1K64Gv1X9b04M5Qdy0jicYzx0loTN_laxKyllVdZZZbXANeEEPrY5bMFnM3-1aYEDf0lhziNMEApkhH-pn6hptD_Eh0Rk2IXBrPS2_uX2UDX3icsnO5PV4VDS8XhZnCoVXPoKY-AWu9PjqdEs0ZSdEmk2qolFd0lEo-Dsz94DdMmJ9A_EMoM6VVJVddSb4PzuMKoqVs31WWS0YfHHIlKwjHKiTEh7-WLfqUeWkZs72P69fctxInBM5GgglzAzG34vkm8rLrcCjwXotXGGCt11LhSvZ2OjtdAvFRT9wljpUSkkeqNSNceRJOhsYGbinOR_AYz8YV_WU_9R0XqECpSRzOisSKwv=s725-no');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center
+            }
+        
+            .tacoma {
+                background-image: url('https://lh3.googleusercontent.com/SUEGmQiPYKPR8NgU-9iXPMouioHrGSslk5bw28c47p-muuwpVDOf3SIy5g6n5KbG6eld4ocXXklBoOtGYEiD2PXduz8fTUyx09OuflHlRttaiuOpPbEHklzKm1OkH6OovIhdF8Pc2alDh5A1DYlz6THg0j24abyW5zPXPzV84LmbqCd825T26ZFb7YCvaOc-2sN7WN6kJ9Ums-4aufI4o8ifb06J3JxUAEEA7WaozNFHjS5T7RtGAQCi0hAJuhwzLAz2RHH_SdyY-lQiHdxbt-kBt6frM19ICCBXo-H3u1Im5ZysmGRYndiUTNz0-kvYijgEb-A-kdHe8SqmfbGL1HrQf5NrVtTMuDksQK529wF1nziidfMJ91HqkFWAIqgpGpYOoSOUE5LGdIK6fcs5TlhMqHUKDa20-aUzGejR7cdU_deDFHGH2Ry3_XqEEiE3xZThn-H1wDMHH3yl-NfSlCTuD4sn47zIiZwEz8VKUgH80vy49YuqBjEKbQ0qo0UdBVEkaESO_soK4b7VkFsb0sWUWisHgHuPTng4uOOPXCivSvrIcbsL-nO_9LfkM3p24dQIl-zUzB7OAUI0Zmp6132kt_3ZFrQ-l6Mpy5e3eTRx0VI70mny3xD1HBhmCWkpqXRCYOFHaXGmTZjLy0q_jBiZMFYv04HFQ9z-0Jf_kiQWL8zUl1wouHqdh_fDZQUAhjZLIcxD2ryCxR6O8U05I--6=s725-no');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center
+            }
+        
+            .porttownsend {
+                background-image: url('https://lh3.googleusercontent.com/htHGS6owdPJWKh-d6cyjtsRKlicPjROAwz0epHlkXdteFkqv3KDXSTJLHE0Y9h4W8IgzlTLMcR_3VqriAofb9F2d9Nw9vPhAZVWhtxMC8UMNdzTqZM9urtZvAKREKD_HL_T7BVSCJz6e2E0UHxzDU4u0eJ9ExV0dEsJ3inzIS6PTmmebW9xZlYULakcB5I99kL_qLw8miFZIE60Rhq8yi0oLFUZ2lGSuyS7lYN1FUTNib2TbXwoYHSPIGAFPWAU1sNKq70mvBw1QGERrbTHaCfmux0ByAb06pSAK6bUeoLhrUfDRDZMu1GUASbYUkKOV5pWmBO6I1XhMPIp7Ax97lr_Xk5D9tai_6OBa_9xarXTFmkhx4HGOtd4jcrA2wl7wqs1wOYYBwCgypjY34Qn7LlBjdZwDgbU8ASUMKJmI73ge6e44l6oHpYJ0KKE0IHZno-nlrC_wH0p0z7Osw5BXNMr3x7x6lQJzZJieAzCwEOCyq0WG58rXKmFYLo3z06BT7T9_IgXbt7AXr-s2ZaO4BW-Txt5re8od12ctGrMFnrV63FPH0D56xEofCBtSKduO4lEaVQdJw-vwKCaXOIjuMuXKoyhPXUZPz4NTQd704pLAjye6ZxV8Ezxwz4-nXQhEBaLnUmWjSjwzoDwNeZvsoLy7D4Ad66llfo_y6YsjZBM9WTyH6hJEau1Vp8mAbCm996CneZSQY0UsDA_5hIavuD_K=w725-h726-no');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center
+            }
+        
+            .neahbay {
+                background-image: url('https://lh3.googleusercontent.com/gSiePg5p4pEuzw7LbpYWe2Hp4xcR6ttnpBv5xmCTGj0_xE7in783mnK-ll95HKy4Sa23GRHDU2u-Wk6nSLdwd8HZnEWvlkgItmzZfi-kHSiv2AbRPVCWi4LhW11usMJIpjyaO2KOmhkM4Vf1mpELeArVZhrr8UtGRc3FVpxwctkU0l3NxFo-2BLngGtqN_tR_bvGjY5UbgnN0_MS20RQybP8s4cP88FpauAas7P8mslTw3BiMC8ktEYq7ZK8xkhaN7P0lIDqSR-hsc4bbTbfA_8OysiHhPJJYOfsgKIGtFMQ733lmYzvByHxbkoAwpDZV1qszZZjux7hcGwM_7VcLjV0pjC3zE3P-eniRPVGYs6QRBG7HLUI7ZKHLhHANN5y3IDowgOkpRknPdk55JvKh0tAbkdX1fBlYKrmmFOMdBcVRU2ofnSz2xY7s2KBOs1anjTeNMjrI4N-_TU3zIo1GhYwGvqjStZkoJIL76myI_Ye90bjlgcazGdLLitd92vpsgk9YySAyuNRAzFxbVh3VH4uWCeGdMXyM-4_pnY3jP-qHe5mMkVV7P7ZVMnkpgeFPuWhbUWLE8vhGlb8OIzUFp7H_kj1htCFKRiENBlMS9OjOrdg5OAKMgT9gaSyiA4bl9Gcf3d0FV1wtXKLN3NKqINPp5xa35nq5NUuYAb4PVdOfYCTjX8AZJvqLYL5B3LlosXGyCHS1ihHjS2rWM5KC_CW=s725-no');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center
+            }
+        /*tide response information*/
+            .tideResponse {
+                color: white;
+                padding-top: 6%;
+            }
+        
+            .nextSlack {
+                margin-top:20px;
+                margin-bottom:30px;
+                padding-top:70px;
+                border: 1px solid white;
+                border-radius: 100px;
+                height: 300px;
+                width: 300px;
+                font-size: 40px;
+                background-color: rgb(0, 0, 0, 0.6);
+            }
+        
+            .tideDetails {
+                margin-top:5px;
+                margin-bottom:5px;
+                border: 1px solid white;
+                border-radius: 10px;
+                width: 30vh;
+                height: 12vh;
+                background-color: rgb(0, 0, 0, 0.6);
+            }
+
+            .CurrentHeight {
+                position: relative;
+                top: 240px;
+            }
+
+            .CurrentTime {
+                position: relative;
+                top: 240px;
+            }
+        
+            .timeDisplay {
+                font-size: 90px;
+                margin: 0px;
+            }
+        
+            .ulTides {
+                margin-top: 0px;
+                margin-bottom: 20px;
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                padding: 0px;
+            }
+        
+            .tideDetailsPara {
+                padding-top: 10px;
+                font-size: 20px;
+            }
+        
+            li {
+                font-family: 'Fira Sans Extra Condensed', sans-serif;
+            }
+        
+            .tideDetailsBold {
+                font-size: 35px;
+            }
+        
+            button {
+                background-color: #65858C;
+                color: white;
+                height: 60px;
+                width: 200px;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                font-family: 'Fira Sans Extra Condensed', sans-serif;    
+                font-size: 30px;
+            }
+        /*weather display & logo*/
+            .weatherDisplay {
+                color: white;
+                padding: 10px;
+            }
+        
+            .ulWeather {
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                padding: 0px;
+                margin: 0px;
+                font-size: 25px;
+            }
+        
+            .smallLogo {
+                height: 22px;
+                margin-right: 8px;
+            }
+        
+            .tempLogo {
+                height: 20px;
+                margin-right: 5px;
+            }
+        
+            .cityName {
+                font-size: 30px;
+                position: absolute;
+                top: 5px;
+            }
+        }
+        
