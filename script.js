@@ -105,7 +105,7 @@ function displayCities() {
         $('.container').addClass('modifyContainer')
         $('.container').html(`
             <div class="cityCluster">        
-            <h2 class="whereDiving">Where are you diving?</h2>
+            <h2 class="whereDiving">Where are<br>you diving</h2>
             <div class="citiesOne">
                 <div class="city seattle 9447130" id="seattle"></div>
                 <div class="city tacoma 9446484" id="tacoma"></div>
