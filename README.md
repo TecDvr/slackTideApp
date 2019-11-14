@@ -1,6 +1,6 @@
 slackTide Web Application 
 
-https://tecdvr.github.io/slackTide/
+https://tecdvr.github.io/slackTideApp/
 
 Screen Shots:
 
